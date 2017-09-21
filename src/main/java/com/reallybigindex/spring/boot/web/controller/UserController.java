@@ -30,9 +30,6 @@ public class UserController {
 	@GetMapping("/users/{id}")
 	@ApiVersion(supported = { "1.0", "3.1" })
 	public User getUser(@PathVariable Long id) {
-		return User.builder()
-				.id(id)
-				.name("Sushil Verma")
-				.build();
+		return new User(id, "Sushil Verma");
 	}
 }

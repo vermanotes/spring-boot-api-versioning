@@ -1,8 +1,5 @@
 package com.reallybigindex.spring.boot.web.mvc.model;
 
-import lombok.Builder;
-import lombok.Value;
-
 /**
  * Item1 model class
  *
@@ -10,8 +7,6 @@ import lombok.Value;
  * @version 1.0
  * @since Sept 21st, 2017
  */
-@Value
-@Builder
 public class Item1 {
 	/**
 	 * 
@@ -21,4 +16,18 @@ public class Item1 {
 	 * 
 	 */
 	private String name;
+	
+	public Item1(Integer id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
 }

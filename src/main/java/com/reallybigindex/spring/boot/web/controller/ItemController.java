@@ -31,10 +31,7 @@ public class ItemController {
 	@GetMapping("/items/{id}")
 	@ApiVersion("1.0")
 	public Item1 getItem(@PathVariable Integer id) {
-		return Item1.builder()
-				.id(id)
-				.name("iPhone 7")
-				.build();
+		return new Item1(id, "iPhone 7");
 	}
 
 	/**
@@ -47,10 +44,6 @@ public class ItemController {
 	@GetMapping("/items/{id}")
 	@ApiVersion(greaterThan = "1.0")
 	public Item2 getItem(@PathVariable Long id) {
-		return Item2.builder()
-				.id(id)
-				.name("iPhone 8")
-				.price(10.9)
-				.build();
+		return new Item2(id, "iPhone 8", 999.0);
 	}
 }

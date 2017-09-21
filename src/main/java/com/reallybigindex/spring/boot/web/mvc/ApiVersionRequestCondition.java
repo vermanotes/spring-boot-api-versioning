@@ -33,7 +33,7 @@ public class ApiVersionRequestCondition implements RequestCondition<ApiVersionRe
 	/**
 	 * It corresponds only to the minor version
 	 */
-	private static final String VERSIONED_PATH_PATTERN = "/{version:\\d+\\.\\d+}/**";
+	private static final String VERSIONED_PATH_PATTERN = "//{version:\\d+\\.\\d+}/**";
 
 	/**
 	 * 

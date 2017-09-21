@@ -1,8 +1,5 @@
 package com.reallybigindex.spring.boot.web.mvc.model;
 
-import lombok.Builder;
-import lombok.Value;
-
 /**
  * User model class
  *
@@ -10,8 +7,6 @@ import lombok.Value;
  * @version 1.0
  * @since Sept 21st, 2017
  */
-@Builder
-@Value
 public class User {
 	/**
 	 * 
@@ -20,5 +15,25 @@ public class User {
 	/**
 	 * 
 	 */
-    private String name;
+	private String name;
+
+	/**
+	 * User field constructor
+	 * 
+	 * @param id
+	 * @param name
+	 */
+	public User(Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
 }
